@@ -1,1 +1,1 @@
-file=open("C:\Users\ovsy2\Desktop\говно", "r")
+print('hello')
