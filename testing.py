@@ -1,5 +1,2 @@
-print('hello')
-print('hello again')
-print('ogo')
-print('da kak tak vashche')
-print('vsmysle')
+file=open("C:/Users/ovsy2/Desktop/something.txt", "r")
+text=file.read
