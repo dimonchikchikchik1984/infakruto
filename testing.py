@@ -1,15 +1,18 @@
-class Shape:
-    def breadth(self):
-        self.b=float(input())
-    def height(self):
-        self.h=float(input())
+class Mother:
+    def __str__(self):
+        return'Mother'
+    pass
 
 
-class Rectangle(Shape):
-    def area(self):
-        print(self.b*self.h)
+class Daughter(Mother):
+    def __str__(self):
+        return'Daughter'
+    pass
 
 
-class Triangle(Shape):
-    def area(self):
-        print(0.5*self.b*self.h)
+if __name__ == "__main__":
+    m=Mother()
+    d=Daughter()
+    print(m, d)
+
+
