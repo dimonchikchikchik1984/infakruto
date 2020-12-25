@@ -40,14 +40,14 @@ if __name__ == "__main__":
     for i in range(randint):
 
         coroutine.send(i)
-        if i % 2 == 0:
-            print( coroutine.throw(PrintVariance))
-            next(coroutine)
-        if i % 3 == 0:
-            print(coroutine.throw(PrintMean))
-            next(coroutine)
-        if i % 5 == 0:
-            print(coroutine.throw(PrintCount))
-            next(coroutine)
+
+        print( coroutine.throw(PrintVariance))
+        next(coroutine)
+
+        print(coroutine.throw(PrintMean))
+        next(coroutine)
+
+        print(coroutine.throw(PrintCount))
+        next(coroutine)
 
     coroutine.close()
