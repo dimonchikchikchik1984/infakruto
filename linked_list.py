@@ -50,7 +50,7 @@ class LinkedLiset:
 
     def __iterreverse__(self):
         self.__current = self.last
-        return Iterreverse()
+        return Iterreverse().__iter__(self)
 
     def __next__(self):
         if self.__curr is None:
