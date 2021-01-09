@@ -67,14 +67,14 @@ class LinkedLiset:
         return val
 
 
-class Iterreverse:
+class Iterreverse(LinkedLiset):
     def __iter__(self):
-        self.a=self.length
+        self.a = self.length
         return self
 
     def __next__(self):
-        x=self.a
-        self.a-=1
+        x = self.a
+        self.a -= 1
         return x
 
 
