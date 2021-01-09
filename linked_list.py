@@ -49,7 +49,7 @@ class LinkedLiset:
         return self
 
     def __iterreverse__(self):
-        self.__current = self.last
+        self.__current = Iterreverse.__next__(self).prv
         return self
 
     def __next__(self):
@@ -65,3 +65,16 @@ class LinkedLiset:
         val = self.__current.get_value()
         self.__curr = self.__current.get_prev()
         return val
+
+
+class Iterreverse:
+    def __iter__(self):
+        self.a=self.length
+        return self
+
+    def __next__(self):
+        x=self.a
+        self.a-=1
+        return x
+
+
