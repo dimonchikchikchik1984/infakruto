@@ -48,6 +48,10 @@ class LinkedLiset:
         self.__curr = self.start
         return self
 
+    def __iterreverse__(self):
+        self.__current = self.last
+        return self
+
     def __next__(self):
         if self.__curr is None:
             raise StopIteration()
@@ -56,8 +60,8 @@ class LinkedLiset:
         return val
 
     def __prev__(self):
-        if self.__curr is None:
+        if self.__current is None:
             raise StopIteration()
-        val = self.__curr.get_value()
-        self.__curr = self.__curr.get_prev()
+        val = self.__current.get_value()
+        self.__curr = self.__current.get_prev()
         return val
